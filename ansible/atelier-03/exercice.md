@@ -197,6 +197,7 @@ Je lance la commande ansible qui permet de ping les machines et ça fonctionne
 bien !
 ```
 vagrant@control:~$ ansible all -i target01,target02,target03 -m ping
+[color=#26B260]
 target03 | SUCCESS => {
     "ansible_facts": {
         "discovered_interpreter_python": "/usr/bin/python3"
@@ -218,6 +219,7 @@ target02 | SUCCESS => {
     "changed": false,
     "ping": "pong"
 }
+[/color]
 ```
 
 
