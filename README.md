@@ -1,6 +1,6 @@
 # Formation Ansible
 
-## Atelier01
+## Ansible par la pratique (3) – Installation
 
 ### Exercice 1
 [Exercice 1](ansible/atelier-01/exercice1.md)
@@ -12,5 +12,11 @@
 [Exercice 3](ansible/atelier-01/exercice3.md)
 
 
-## Atelier03
+## Ansible par la pratique (4) – Authentification
 [Exercice](ansible/atelier-03/exercice.md)
+
+## Ansible par la pratique (6) – Configuration de base
+[Exercice](ansible/atelier-06/exercice.md)
+
+## Ansible par la pratique (8) – Idempotence
+[Exercice](ansible/atelier-07/exercice.md)
