@@ -1,4 +1,4 @@
-#Exercice 2 
+# Exercice 2 
 
 Une fois la VM Ubuntu démarré, je configure le dépôt PPA sur la machine avec la commande :
 ```

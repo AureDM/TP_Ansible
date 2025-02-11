@@ -1,4 +1,4 @@
-#Exercice 1
+# Exercice 1
 
 - Démarrez la VM ubuntu depuis le répertoire atelier-01.
 ```
