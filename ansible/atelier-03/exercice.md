@@ -20,7 +20,8 @@ J'essaie une 1e fois de lancer la commande des ping, rien ne marche, je dois
 créer une paire de clé SSH sur la VM control et envoyer la clé publique sur
 toutes les target.
 
-Je collecte les clés SSH publiques des Target Hosts :
+Avant ça, je collecte les clés SSH publiques des Target Hosts pour les mettre
+dans mon fichier known_hosts :
 ```
 vagrant@control:~$ ssh-keyscan -t rsa target01 target02 target03 >> .ssh/known_hosts
 # target02:22 SSH-2.0-OpenSSH_8.9p1 Ubuntu-3ubuntu0.10
