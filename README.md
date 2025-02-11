@@ -12,7 +12,7 @@ vagrant up ubuntu
 vagrant ssh ubuntu
 ```
 
-- Rafraîchissez les informations sur les paquets.
+- Rafraîchissez les informations sur les paquets.  
 Une fois connecté sur la VM ubuntu :
 ```
 sudo apt update
@@ -39,7 +39,7 @@ vagrant@ubuntu:~$ ansible --version
 **ansible 2.10.8**
 ```
 
-- Déconnectez-vous et supprimez la VM.
+- Déconnectez-vous et supprimez la VM.  
 Déconnexion de la VM :
 ```
 exit
