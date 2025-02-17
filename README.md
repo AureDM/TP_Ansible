@@ -20,3 +20,6 @@
 
 ## Ansible par la pratique (8) – Idempotence
 [Exercice](ansible/atelier-07/exercice.md)
+
+## Ansible par la pratique (10) – Un serveur web simple
+[Exercice](ansible/atelier-10/exercice.md)
