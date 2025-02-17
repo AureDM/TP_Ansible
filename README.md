@@ -23,3 +23,6 @@
 
 ## Ansible par la pratique (10) – Un serveur web simple
 [Exercice](ansible/atelier-10/exercice.md)
+
+## Ansible par la pratique (11) – Handler
+[Exercice](ansible/atelier-12/exercice.md)
