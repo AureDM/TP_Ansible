@@ -29,3 +29,6 @@
 
 ## Ansible par la pratique (12) – Variables
 [Exercice](ansible/atelier-14/exercice.md)
+
+## Ansible par la pratique (13) – Variables enregistrées
+[Exercice](ansible/atelier-15/exercice.md)
