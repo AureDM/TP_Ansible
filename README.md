@@ -26,3 +26,6 @@
 
 ## Ansible par la pratique (11) – Handler
 [Exercice](ansible/atelier-12/exercice.md)
+
+## Ansible par la pratique (12) – Variables
+[Exercice](ansible/atelier-14/exercice.md)
