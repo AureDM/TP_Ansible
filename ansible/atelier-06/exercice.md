@@ -9,7 +9,7 @@ machines par leur nom d'hôte, j'ajoute :
 192.168.56.40   target03
 ```
 
-#### Configurez l’authentification par clé SSH avec les trois Target Hosts.  
+### Configurez l’authentification par clé SSH avec les trois Target Hosts.  
 Sur la machine control, je crée une paire de clé SSH
 ```
 vagrant@control:~$ ssh-keygen
@@ -66,14 +66,14 @@ vagrant@control:~$ ssh vagrant@target01
 Welcome to Ubuntu 22.04.4 LTS (GNU/Linux 5.15.0-116-generic x86_64)
 ```
 
-#### Installez Ansible.  
+### Installez Ansible.  
 
 ```
 sudo apt update
 sudo apt install ansible
 ```
 
-#### Envoyez un premier ping Ansible sans configuration.  
+### Envoyez un premier ping Ansible sans configuration.  
 Le ping de control vers les target fonctionne bien :
 ```
 vagrant@control:~$ ansible all -i target01,target02,target03 -m ping
@@ -100,7 +100,7 @@ target03 | SUCCESS => {
 }
 ```
 
-#### Créez un répertoire de projet ~/monprojet.
+### Créez un répertoire de projet ~/monprojet.
 
 ```
 vagrant@control:~$ mkdir monprojet
@@ -110,7 +110,7 @@ vagrant@control:~$ pwd
 /home/vagrant
 ```
 
-#### Créez un fichier vide ansible.cfg dans ce répertoire.
+### Créez un fichier vide ansible.cfg dans ce répertoire.
 
 ```
 vagrant@control:~/monprojet$ touch ansible.cfg
@@ -118,7 +118,7 @@ vagrant@control:~/monprojet$ ls
 ansible.cfg
 ```
 
-#### Vérifiez si ce fichier est bien pris en compte par Ansible.  
+### Vérifiez si ce fichier est bien pris en compte par Ansible.  
 
 Le fichier ansible.cfg est bien pris en compte par Ansible :
 ```
@@ -131,7 +131,7 @@ ansible 2.10.8
   python version = 3.10.12 (main, Mar 22 2024, 16:50:05) [GCC 11.4.0]
 ```
 
-#### Spécifiez un inventaire nommé hosts.  
+### Spécifiez un inventaire nommé hosts.  
 Création du fichier hosts vide :
 ```
 vagrant@control:~/monprojet$ touch hosts
@@ -139,7 +139,7 @@ vagrant@control:~/monprojet$ ls
 ansible.cfg  hosts
 ```
 
-#### Activez la journalisation dans ~/journal/ansible.log.  
+### Activez la journalisation dans ~/journal/ansible.log.  
 J'ajoute ce morceaux de code dans le fichier ~/monprojet/ansible.cfg :
 ```
 [defaults]
@@ -151,7 +151,7 @@ Je crée le dossier journal :
 mkdir ~/journal
 ```
 
-#### Testez la journalisation.  
+### Testez la journalisation.  
 Pour tester la journalisation, je fais une commande ansible, de ping les target par exemple, le résultat ira
 dans le fichier de log crée juste avant :
 ```
@@ -169,7 +169,7 @@ vagrant@control:~/monprojet$ cat ~/journal/ansible.log
 2025-02-12 11:03:20,202 p=4083 u=vagrant n=ansible | target02 | SUCCESS => {"ansible_facts": {"discovered_interpreter_python": "/usr/bin/python3"},"changed": false,"ping": "pong"}
 ```
 
-#### Créez un groupe [testlab] avec vos trois Target Hosts.  
+### Créez un groupe [testlab] avec vos trois Target Hosts.  
 J'ouvre le fichier monprojet/hosts et j'ajoute les lignes :
 ```
 [testlab]
@@ -179,14 +179,14 @@ target03
 ```
 
 
-#### Définissez explicitement l’utilisateur vagrant pour la connexion à vos cibles.  
+### Définissez explicitement l’utilisateur vagrant pour la connexion à vos cibles.  
 J'ajoute dans le fichier monprojet/hosts :
 ```
 [testlab:vars]
 ansible_user=vagrant
 ```
 
-#### Envoyez un ping Ansible vers le groupe de machines [all].
+### Envoyez un ping Ansible vers le groupe de machines [all].
 
 J'obtiens une erreur comme quoi il ne trouve pas de fichier d'inventaire : 
 ```
@@ -211,7 +211,7 @@ target03 | SUCCESS => {"ansible_facts": {"discovered_interpreter_python": "/usr/
 target01 | SUCCESS => {"ansible_facts": {"discovered_interpreter_python": "/usr/bin/python3"},"changed": false,"ping": "pong"}
 ```
 
-#### Définissez l’élévation des droits pour l’utilisateur vagrant sur les Target Hosts.  
+### Définissez l’élévation des droits pour l’utilisateur vagrant sur les Target Hosts.  
 J'ajoute dans le fichier d'inventaire (hosts) ansible_become=yes permettant
 l'élévation des droits :
 ```
@@ -220,7 +220,7 @@ ansible_user=vagrant
 ansible_become=yes
 ```
 
-#### Affichez la première ligne du fichier /etc/shadow sur tous les Target Hosts.
+### Affichez la première ligne du fichier /etc/shadow sur tous les Target Hosts.
 
 ```
 vagrant@control:~/monprojet$ ansible all -m command -a "head -n 1 /etc/shadow"
@@ -232,7 +232,7 @@ target03 | CHANGED | rc=0 >>
 root:*:19769:0:99999:7:::
 ```
 
-#### Quittez le Control Host et supprimez toutes les VM de l’atelier.  
+### Quittez le Control Host et supprimez toutes les VM de l’atelier.  
 - Quitter le Control Host :
 ```
 vagrant@control:~/monprojet$ exit
