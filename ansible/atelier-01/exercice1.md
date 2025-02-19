@@ -40,11 +40,12 @@ ansible 2.10.8
 
 - Déconnectez-vous et supprimez la VM.
 
-* Déconnexion de la VM :
+Déconnexion de la VM :
 ```
 exit
 ```
-* Suppression de la VM :
+
+Suppression de la VM :
 ```
 vagrant destroy -f ubuntu
 ```

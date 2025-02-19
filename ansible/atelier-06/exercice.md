@@ -1,6 +1,6 @@
 # Exercice
 
-#### Éditez /etc/hosts de manière à ce que les Target Hosts soient joignables par leur nom d’hôte simple.  
+### Éditez /etc/hosts de manière à ce que les Target Hosts soient joignables par leur nom d’hôte simple.  
 Sur la machine control, je modifie le fichier /etc/hosts pour joindre les
 machines par leur nom d'hôte, j'ajoute :
 ```
