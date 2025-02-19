@@ -36,24 +36,54 @@ Playbook chrony-01.yml avec la méthode "gros sabots" :
       when: ansible_distribution == "openSUSE Leap"
 
     - name: Config Chrony sur Debian/Ubuntu
-      template:
-        src: chrony.conf.j2
+      copy:
+        content: |
+          # /etc/chrony/chrony.conf
+
+          server 0.fr.pool.ntp.org iburst
+          server 1.fr.pool.ntp.org iburst
+          server 2.fr.pool.ntp.org iburst
+          server 3.fr.pool.ntp.org iburst
+          driftfile /var/lib/chrony/drift
+          makestep 1.0 3
+          rtcsync
+          logdir /var/log/chrony
         dest: /etc/chrony/chrony.conf
-      notify: Redemarrer Chrony
+      notify: Restart Chrony Debian
       when: ansible_distribution == "Debian"
 
     - name: Config Chrony sur Rocky
-      template:
-        src: chrony.conf.j2
+      copy:
+        content: |
+          # /etc/chrony.conf
+
+          server 0.fr.pool.ntp.org iburst
+          server 1.fr.pool.ntp.org iburst
+          server 2.fr.pool.ntp.org iburst
+          server 3.fr.pool.ntp.org iburst
+          driftfile /var/lib/chrony/drift
+          makestep 1.0 3
+          rtcsync
+          logdir /var/log/chrony
         dest: /etc/chrony.conf
-      notify: Redemarrer Chrony
+      notify: Restart Chrony Rocky
       when: ansible_distribution == "Rocky"
 
     - name: Config Chrony sur Open SUSE
-      template:
-        src: chrony.conf.j2
+      copy:
+        content: |
+          # /etc/chrony.conf
+
+          server 0.fr.pool.ntp.org iburst
+          server 1.fr.pool.ntp.org iburst
+          server 2.fr.pool.ntp.org iburst
+          server 3.fr.pool.ntp.org iburst
+          driftfile /var/lib/chrony/drift
+          makestep 1.0 3
+          rtcsync
+          logdir /var/log/chrony
         dest: /etc/chrony.conf
-      notify: Redemarrer Chrony
+      notify: Restart Chrony SUSE
       when: ansible_distribution == "openSUSE Leap"
 
   handlers:
@@ -78,20 +108,6 @@ Playbook chrony-01.yml avec la méthode "gros sabots" :
         enabled: yes
       when: ansible_distribution == "openSUSE Leap"
 ...
-```
-
-Fichier de config de chrony : 
-```
-[vagrant@ansible playbooks]$ cat chrony.conf.j2 
-# chrony.conf
-server 0.fr.pool.ntp.org iburst
-server 1.fr.pool.ntp.org iburst
-server 2.fr.pool.ntp.org iburst
-server 3.fr.pool.ntp.org iburst
-driftfile /var/lib/chrony/drift
-makestep 1.0 3
-rtcsync
-logdir /var/log/chrony
 ```
 
 Résultat du playbook : 
