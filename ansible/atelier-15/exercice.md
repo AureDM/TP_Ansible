@@ -1,6 +1,6 @@
 # Exercice
 
-- Écrivez un playbook kernel.yml qui affiche les infos détaillées du noyau sur tous vos Target Hosts. Utilisez la commande uname -a et le module debug avec le paramètre msg.  
+### Écrivez un playbook kernel.yml qui affiche les infos détaillées du noyau sur tous vos Target Hosts. Utilisez la commande uname -a et le module debug avec le paramètre msg.  
 
 Playbook :
 ```
@@ -59,7 +59,7 @@ skipped=0    rescued=0    ignored=0
 ```
 
 
-- Essayez d’obtenir le même résultat en utilisant le paramètre var du module debug.
+### Essayez d’obtenir le même résultat en utilisant le paramètre var du module debug.
 
 J'obtiens exactement le même résultat avec ce playbook :
 ```
@@ -83,7 +83,7 @@ J'obtiens exactement le même résultat avec ce playbook :
 ```
 
 
-- Écrivez un playbook packages.yml qui affiche le nombre total de paquets RPM installés sur les hôtes rocky et suse (rpm -qa | wc -l).  
+### Écrivez un playbook packages.yml qui affiche le nombre total de paquets RPM installés sur les hôtes rocky et suse (rpm -qa | wc -l).  
 
 Playbook : 
 ```

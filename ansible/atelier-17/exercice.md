@@ -2,7 +2,7 @@
 
 ## Écrivez successivement deux playbooks pour mettre en place la synchronisation NTP avec Chrony sur vos quatre Target Hosts (Debian, Rocky, Suse, Ubuntu)
 
-- Le premier playbook chrony-01.yml utilisera les modules de gestion de paquets natifs apt, dnf et zypper et s’inspirera de la méthode « gros sabots » utilisée plus haut dans cet article  
+### Le premier playbook chrony-01.yml utilisera les modules de gestion de paquets natifs apt, dnf et zypper et s’inspirera de la méthode « gros sabots » utilisée plus haut dans cet article  
 
 Playbook chrony-01.yml avec la méthode "gros sabots" :
 ```
@@ -171,7 +171,7 @@ suse                       : ok=3    changed=0    unreachable=0    failed=0    s
 ubuntu                     : ok=3    changed=0    unreachable=0    failed=0    skipped=5    rescued=0    ignored=0
 ```
 
-- Le deuxième playbook chrony-02.yml définira trois variables chrony_package, chrony_service et chrony_confdir et utilisera le module de gestion de paquets générique package.  
+### Le deuxième playbook chrony-02.yml définira trois variables chrony_package, chrony_service et chrony_confdir et utilisera le module de gestion de paquets générique package.  
 
 On utilise le même fichier de configuration chrony que dans le playbook
 différent.  

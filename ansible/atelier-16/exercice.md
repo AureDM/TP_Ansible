@@ -7,7 +7,7 @@ utilisant la commande "ansible target -m setup | grep
 paquet_que_l_on_recherche"
 
 
-- pkg-info.yml pour afficher le gestionnaire de paquets utilisé
+### pkg-info.yml pour afficher le gestionnaire de paquets utilisé
 
 Le playbook est le suivant (fact a utilisé : ansible_pkg_mgr) :
 ```
@@ -50,7 +50,7 @@ rocky                      : ok=2    changed=0    unreachable=0    failed=0    s
 suse                       : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
 ```
 
-- python-info.yml pour afficher la version de Python installée
+### python-info.yml pour afficher la version de Python installée
 
 Le playbook utilise le fact ansible_python_version :
 ```
@@ -94,7 +94,7 @@ rocky                      : ok=2    changed=0    unreachable=0    failed=0    s
 suse                       : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
 ```
 
-- dns-info.yml pour afficher le(s) serveur(s) DNS utilisé(s)
+### dns-info.yml pour afficher le(s) serveur(s) DNS utilisé(s)
 
 Ce playbook utilise le module ansible_dns.nameservers pour fonctionner :
 ```

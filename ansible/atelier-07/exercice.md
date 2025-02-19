@@ -1,6 +1,6 @@
 # Exercice
 
-- Installez successivement les paquets tree, git et nmap sur toutes les cibles.  
+### Installez successivement les paquets tree, git et nmap sur toutes les cibles.  
 Il faut utiliser le module "package" qui permet d'installer les commandes sur
 tout type de machine avec les gestionnaires de paquet différent (apt, zypper, dnf)
 ```
@@ -17,7 +17,7 @@ suse | SUCCESS => {"changed": false,"name": ["tree","git","nmap"],"rc": 0,"state
 rocky | SUCCESS => {"changed": false,"msg": "Nothing to do","rc": 0,"results": []}
 ```
 
-- Désinstallez successivement ces trois paquets en utilisant le paramètre supplémentaire state=absent.  
+### Désinstallez successivement ces trois paquets en utilisant le paramètre supplémentaire state=absent.  
 ```
 ansible all -m package -a "name=tree,git,nmap state=absent"
 ```
@@ -30,7 +30,7 @@ suse | SUCCESS => {"changed": false,"name": ["tree","git","nmap"],"rc": 0,"state
 rocky | SUCCESS => {"changed": false,"msg": "Nothing to do","rc": 0,"results": []}
 ```
 
-- Copier le fichier /etc/fstab du Control Host vers tous les Target Hosts sous forme d’un fichier /tmp/test3.txt.  
+### Copier le fichier /etc/fstab du Control Host vers tous les Target Hosts sous forme d’un fichier /tmp/test3.txt.  
 ```
 ansible all -m copy -a "src=/etc/fstab dest=/tmp/test3.txt"
 ```
@@ -43,7 +43,7 @@ suse | SUCCESS => {"changed": false,"checksum": "d39263691e31170df199aae3d93f7c5
 rocky | SUCCESS => {"changed": false,"checksum": "d39263691e31170df199aae3d93f7c556fbb3446","dest": "/tmp/test3.txt","gid": 0,"group": "root","mode": "0644","owner": "root","path": "/tmp/test3.txt","secontext": "unconfined_u:object_r:user_home_t:s0","size": 743,"state": "file","uid": 0}
 ```
 
-- Supprimez le fichier /tmp/test3.txt sur les Target Hosts en utilisant le module file avec le paramètre state=absent.  
+### Supprimez le fichier /tmp/test3.txt sur les Target Hosts en utilisant le module file avec le paramètre state=absent.  
 ```
 ansible all -m file -a "path=/tmp/test3.txt state=absent"
 ```
@@ -56,7 +56,7 @@ suse | SUCCESS => {"changed": false,"path": "/tmp/test3.txt","state": "absent"}
 rocky | SUCCESS => {"changed": false,"path": "/tmp/test3.txt","state": "absent"}
 ```
 
-- Enfin, affichez l’espace utilisé par la partition principale sur tous les Target Hosts. Que remarquez-vous ?  
+### Enfin, affichez l’espace utilisé par la partition principale sur tous les Target Hosts. Que remarquez-vous ?  
 ```
 ansible all -m command -a "df -h /"
 ```

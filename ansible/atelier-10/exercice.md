@@ -1,6 +1,6 @@
 # Exercice
 
-- Un premier playbook apache-debian.yml qui installe Apache sur l’hôte debian avec une page personnalisée Apache web server running on Debian Linux.  
+### Un premier playbook apache-debian.yml qui installe Apache sur l’hôte debian avec une page personnalisée Apache web server running on Debian Linux.  
 
 Playbook :
 ```
@@ -83,7 +83,7 @@ Curl pour voir le résultat :
 </html>
 ```
 
-- Un deuxième playbook apache-rocky.yml qui installe Apache sur l’hôte rocky avec une page personnalisée Apache web server running on Rocky Linux.  
+### Un deuxième playbook apache-rocky.yml qui installe Apache sur l’hôte rocky avec une page personnalisée Apache web server running on Rocky Linux.  
 
 Playbook : 
 ```
@@ -159,7 +159,7 @@ Curl pour voir le résultat :
 </html>
 ```
 
-- Un troisième playbook apache-suse.yml qui installe Apache sur l’hôte suse avec une page personnalisée Apache web server running on SUSE Linux.  
+### Un troisième playbook apache-suse.yml qui installe Apache sur l’hôte suse avec une page personnalisée Apache web server running on SUSE Linux.  
 
 Playbook : 
 ```
