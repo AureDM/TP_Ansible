@@ -1,8 +1,6 @@
 # Formation Ansible
 
-<span style="color:red">
 ## Ansible par la pratique (3) – Installation
-</span>
 
 ### Exercice 1
 - [Exercice 1](ansible/atelier-01/exercice1.md)
