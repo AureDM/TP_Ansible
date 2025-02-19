@@ -2,6 +2,11 @@
 
 ## Écrivez trois playbooks pour afficher des informations sur chacun des Target Hosts :
 
+Pour trouver les facts que l'on souhaite, il faut les rechercher via la machine controle en
+utilisant la commande "ansible target -m setup | grep
+paquet_que_l_on_recherche"
+
+
 - pkg-info.yml pour afficher le gestionnaire de paquets utilisé
 
 Le playbook est le suivant (fact a utilisé : ansible_pkg_mgr) :

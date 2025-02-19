@@ -35,3 +35,6 @@
 
 ## Ansible par la pratique (14) – Facts et variables implicites
 [Exercice](ansible/atelier-16/exercice.md)
+
+## Ansible par la pratique (15) – Cibles hétérogènes
+[Exercice](ansible/atelier-17/exercice.md)
