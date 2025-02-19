@@ -38,3 +38,6 @@
 
 ## Ansible par la pratique (15) – Cibles hétérogènes
 [Exercice](ansible/atelier-17/exercice.md)
+
+## Ansible par la pratique (16) – Jinja & Templates
+[Exercice](ansible/atelier-18/exercice.md)

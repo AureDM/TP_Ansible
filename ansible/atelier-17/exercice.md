@@ -174,9 +174,19 @@ Playbook chrony-02.yml
         name: "{{ chrony_package }}"
         state: present
 
-    - name: Configurer Chrony
-      template:
-        src: chrony.conf.j2
+    - name: Configure Chrony
+      copy:
+        content: |
+          # {{ chrony_confdir }}/chrony.conf
+
+          server 0.fr.pool.ntp.org iburst
+          server 1.fr.pool.ntp.org iburst
+          server 2.fr.pool.ntp.org iburst
+          server 3.fr.pool.ntp.org iburst
+          driftfile /var/lib/chrony/drift
+          makestep 1.0 3
+          rtcsync
+          logdir /var/log/chrony
         dest: "{{ chrony_confdir }}/chrony.conf"
       notify: Restart Chrony
 
